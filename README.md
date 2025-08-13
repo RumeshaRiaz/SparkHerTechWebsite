@@ -37,7 +37,6 @@ Welcome to the official website of SparkHer Tech Academy - empowering women with
 - **Phone:** +92-3407639339
 - **Email:** sparkhertech@gmail.com
 - **Address:** Street 05, Chatha Town, Near Mall Road, Sargodha, Pakistan
-- **Website:** www.reallygreatsite.com
 
 ## 🌈 Color Theme
 

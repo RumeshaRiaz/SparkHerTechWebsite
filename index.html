@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkHer Tech Academy - A Fresh Start, A Powerful Journey Just for HER!</title>
+    <meta name="description" content="SparkHer Tech Academy offers comprehensive tech courses for women including Web Design, Data Science, Mobile App Development, and more.">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="asset/logo.png" alt="SparkHer Logo" class="logo-img">
+                <span>SPARK<span class="her-highlight">HER</span></span>
+                <small>TECH ACADEMY</small>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li class="dropdown">
+                    <a href="#courses" class="nav-link dropdown-toggle">
+                        Courses <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#courses" class="dropdown-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Web Designing</span>
+                        </a>
+                        <a href="#courses" class="dropdown-item">
+                            <i class="fas fa-video"></i>
+                            <span>Video Editing</span>
+                        </a>
+                        <a href="#courses" class="dropdown-item">
+                            <i class="fas fa-drafting-compass"></i>
+                            <span>UI/UX Design</span>
+                        </a>
+                        <a href="#courses" class="dropdown-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Data Science</span>
+                        </a>
+                        <a href="#courses" class="dropdown-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Chatbot Development</span>
+                        </a>
+                        <a href="#courses" class="dropdown-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile App Development</span>
+                        </a>
+                        <a href="#courses" class="dropdown-item featured">
+                            <i class="fas fa-code"></i>
+                            <span>Full Stack Development</span>
+                            <small>Most Popular</small>
+                        </a>
+                    </div>
+                </li>
+                <li><a href="#jobs" class="nav-link">Jobs</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#enroll" class="nav-link cta-btn">Enroll Now</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-logo">
+                    <img src="asset/logo.png" alt="SparkHer Logo" class="hero-logo-img">
+                    <h1>SPARK<span>HER</span></h1>
+                </div>
+                
+                <h2 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                    A FRESH START, A POWERFUL<br>
+                    JOURNEY JUST FOR <span class="highlight">HER!</span>
+                </h2>
+                
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+                    Empowering women with cutting-edge technology skills through comprehensive courses designed for success in the digital world.
+                </p>
+                
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="800">
+                <div class="hero-illustration">
+                    <img src="asset/Poster (2).png" alt="SparkHer Tech Academy Poster" class="illustration-img">
+                    <!-- Sparkling animations -->
+                    <div class="sparkles">
+                        <div class="sparkle sparkle-1">✨</div>
+                        <div class="sparkle sparkle-2">⭐</div>
+                        <div class="sparkle sparkle-3">✨</div>
+                        <div class="sparkle sparkle-4">💫</div>
+                        <div class="sparkle sparkle-5">⭐</div>
+                        <div class="sparkle sparkle-6">✨</div>
+                        <div class="sparkle sparkle-7">💫</div>
+                        <div class="sparkle sparkle-8">⭐</div>
+                        <div class="sparkle sparkle-9">✨</div>
+                        <div class="sparkle sparkle-10">💫</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>WHAT WE OFFER</h2>
+                <h3>COURSES TO <span class="highlight">GROW</span> & <span class="highlight">GLOW</span></h3>
+                <div class="decorative-line"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>At SparkHer Tech Academy, we believe every woman deserves the opportunity to excel in technology. Our comprehensive courses are designed specifically for women who want to start their tech journey or advance their existing skills.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                            <h4 class="stat-number">7+</h4>
+                            <p>Tech Courses</p>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                            <h4 class="stat-number">100%</h4>
+                            <p>Women Focused</p>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="600">
+                            <h4 class="stat-number">24/7</h4>
+                            <p>Support</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="feature-badge">
+                        <i class="fas fa-star"></i>
+                        <span>Premium Quality Education</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Courses</h2>
+                <p>Choose from our comprehensive range of technology courses</p>
+            </div>
+            
+            <div class="courses-grid">
+                <!-- Web Designing -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Web Designing</h3>
+                    <p>Learn website layouts, animations, SEO basics, and cross-device compatibility.</p>
+                    <ul class="course-features">
+                        <li>Responsive Design</li>
+                        <li>CSS Animations</li>
+                        <li>SEO Optimization</li>
+                    </ul>
+                    <a href="#enroll" class="course-btn">Learn More</a>
+                </div>
+
+                <!-- Video Editing -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Editing</h3>
+                    <p>Learn transitions, effects, color grading, audio mixing, and professional storytelling techniques.</p>
+                    <ul class="course-features">
+                        <li>Professional Effects</li>
+                        <li>Color Grading</li>
+                        <li>Audio Mixing</li>
+                    </ul>
+                    <a href="#enroll" class="course-btn">Learn More</a>
+                </div>
+
+                <!-- Wireframing & UI/UX Design -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="course-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Wireframing & UI/UX Design</h3>
+                    <p>Learn user-centered design principles, wireframing, prototyping, and usability testing.</p>
+                    <ul class="course-features">
+                        <li>User Research</li>
+                        <li>Prototyping</li>
+                        <li>Usability Testing</li>
+                    </ul>
+                    <a href="#enroll" class="course-btn">Learn More</a>
+                </div>
+
+                <!-- Data Science -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="course-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Science</h3>
+                    <p>Learn to work on real-world datasets, data cleaning, visualization, and analysis.</p>
+                    <ul class="course-features">
+                        <li>Data Analysis</li>
+                        <li>Machine Learning</li>
+                        <li>Data Visualization</li>
+                    </ul>
+                    <a href="#enroll" class="course-btn">Learn More</a>
+                </div>
+
+                <!-- Chatbot Development -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="course-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Chatbot Development</h3>
+                    <p>Create AI-powered chatbots. Learn conversation flow design and automation for customer service.</p>
+                    <ul class="course-features">
+                        <li>AI Integration</li>
+                        <li>Conversation Design</li>
+                        <li>Automation</li>
+                    </ul>
+                    <a href="#enroll" class="course-btn">Learn More</a>
+                </div>
+
+                <!-- Mobile App Development -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="course-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Learn to design, develop, and publish fully functional mobile apps using React Native, Flutter and Android.</p>
+                    <ul class="course-features">
+                        <li>React Native</li>
+                        <li>Flutter</li>
+                        <li>App Store Publishing</li>
+                    </ul>
+                    <a href="#enroll" class="course-btn">Learn More</a>
+                </div>
+
+                <!-- Full Stack Development -->
+                <div class="course-card featured" data-aos="fade-up" data-aos-delay="700">
+                    <div class="course-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="featured-badge">Most Popular</div>
+                    <h3>Full Stack Development</h3>
+                    <p>Learn front-end and back-end development, Git version control, authentication, database management.</p>
+                    <ul class="course-features">
+                        <li>Frontend & Backend</li>
+                        <li>Database Management</li>
+                        <li>Version Control</li>
+                    </ul>
+                    <a href="#enroll" class="course-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs & Career Opportunities Section -->
+    <section id="jobs" class="jobs-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>UPCOMING JOBS & CAREER OPPORTUNITIES</h2>
+                <h3>EARN & BE <span class="highlight">INDEPENDENT</span></h3>
+                <p>Discover high-paying career opportunities waiting for you after completing our courses</p>
+                <div class="decorative-line"></div>
+            </div>
+            
+            <div class="jobs-grid">
+                <!-- Web Designer Jobs -->
+                <div class="job-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="job-header">
+                        <div class="job-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="job-course">Web Designing</div>
+                    </div>
+                    <div class="job-content">
+                        <h3>UI/UX Designer</h3>
+                        <div class="salary-range">$40,000 - $80,000/year</div>
+                        <div class="job-features">
+                            <span class="job-tag">Remote Friendly</span>
+                            <span class="job-tag">High Demand</span>
+                        </div>
+                        <p>Create stunning user interfaces and experiences for websites and mobile apps</p>
+                    </div>
+                </div>
+
+                <!-- Video Editor Jobs -->
+                <div class="job-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="job-header">
+                        <div class="job-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="job-course">Video Editing</div>
+                    </div>
+                    <div class="job-content">
+                        <h3>Video Content Creator</h3>
+                        <div class="salary-range">$35,000 - $70,000/year</div>
+                        <div class="job-features">
+                            <span class="job-tag">Freelance</span>
+                            <span class="job-tag">Creative</span>
+                        </div>
+                        <p>Edit videos for YouTube, social media, marketing campaigns, and entertainment</p>
+                    </div>
+                </div>
+
+                <!-- Data Scientist Jobs -->
+                <div class="job-card featured-job" data-aos="fade-up" data-aos-delay="300">
+                    <div class="job-header">
+                        <div class="job-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="job-course">Data Science</div>
+                    </div>
+                    <div class="job-content">
+                        <div class="trending-badge">🔥 Highest Paying</div>
+                        <h3>Data Scientist</h3>
+                        <div class="salary-range">$80,000 - $150,000/year</div>
+                        <div class="job-features">
+                            <span class="job-tag">High Salary</span>
+                            <span class="job-tag">Future-Proof</span>
+                        </div>
+                        <p>Analyze data to help companies make strategic business decisions</p>
+                    </div>
+                </div>
+
+                <!-- Mobile App Developer Jobs -->
+                <div class="job-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="job-header">
+                        <div class="job-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="job-course">Mobile App Development</div>
+                    </div>
+                    <div class="job-content">
+                        <h3>Mobile App Developer</h3>
+                        <div class="salary-range">$60,000 - $120,000/year</div>
+                        <div class="job-features">
+                            <span class="job-tag">Growing Field</span>
+                            <span class="job-tag">Innovation</span>
+                        </div>
+                        <p>Build mobile applications for iOS and Android platforms</p>
+                    </div>
+                </div>
+
+                <!-- Full Stack Developer Jobs -->
+                <div class="job-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="job-header">
+                        <div class="job-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="job-course">Full Stack Development</div>
+                    </div>
+                    <div class="job-content">
+                        <h3>Full Stack Developer</h3>
+                        <div class="salary-range">$70,000 - $130,000/year</div>
+                        <div class="job-features">
+                            <span class="job-tag">Versatile</span>
+                            <span class="job-tag">In-Demand</span>
+                        </div>
+                        <p>Develop complete web applications from frontend to backend</p>
+                    </div>
+                </div>
+
+                <!-- Chatbot Developer Jobs -->
+                <div class="job-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="job-header">
+                        <div class="job-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="job-course">Chatbot Development</div>
+                    </div>
+                    <div class="job-content">
+                        <h3>AI Chatbot Specialist</h3>
+                        <div class="salary-range">$50,000 - $90,000/year</div>
+                        <div class="job-features">
+                            <span class="job-tag">AI Future</span>
+                            <span class="job-tag">Emerging</span>
+                        </div>
+                        <p>Create intelligent chatbots for customer service and automation</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="jobs-cta" data-aos="fade-up" data-aos-delay="700">
+                <h3>Ready to Start Your High-Paying Tech Career?</h3>
+                <p>Join thousands of women who have transformed their financial future through technology</p>
+                <div class="independence-stats">
+                    <div class="stat">
+                        <strong>85%</strong>
+                        <span>of our graduates get jobs within 6 months</span>
+                    </div>
+                    <div class="stat">
+                        <strong>$65K</strong>
+                        <span>average starting salary</span>
+                    </div>
+                    <div class="stat">
+                        <strong>100%</strong>
+                        <span>financial independence achievable</span>
+                    </div>
+                </div>
+                <a href="#courses" class="btn btn-primary">Choose Your Path to Independence</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>CONTACT US</h2>
+                <p>Ready to start your tech journey? Get in touch with us!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+92-3407639339</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>sparkhertech@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Street 05, Chatha Town, Near Mall Road, Sargodha, Pakistan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Website</h4>
+                            <p>www.reallygreatsite.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <select name="course" required>
+                                <option value="">Select a Course</option>
+                                <option value="web-design">Web Designing</option>
+                                <option value="video-editing">Video Editing</option>
+                                <option value="ui-ux">Wireframing & UI/UX Design</option>
+                                <option value="data-science">Data Science</option>
+                                <option value="chatbot">Chatbot Development</option>
+                                <option value="mobile-app">Mobile App Development</option>
+                                <option value="full-stack">Full Stack Development</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment CTA Section -->
+    <section id="enroll" class="enroll-cta">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Ready to Start Your Tech Journey?</h2>
+                <p>Join hundreds of women who have transformed their careers with SparkHer Tech Academy</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Enroll Now</a>
+                    <a href="tel:+923407639339" class="btn btn-secondary">Call Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="asset/logo.png" alt="SparkHer Logo" class="footer-logo-img">
+                    <span>SPARKHER TECH ACADEMY</span>
+                </div>
+                <p>&copy; 2024 SparkHer Tech Academy. All rights reserved. Empowering women in technology.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

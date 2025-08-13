@@ -82,4 +82,4 @@ SparkHer Tech Academy is dedicated to empowering women in technology. Our missio
 
 ---
 
-© 2024 SparkHer Tech Academy. All rights reserved.
+© 2025 SparkHer Tech Academy. All rights reserved.

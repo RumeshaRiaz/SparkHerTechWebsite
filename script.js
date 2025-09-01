@@ -1,10 +1,12 @@
 // Initialize AOS (Animate On Scroll)
 document.addEventListener('DOMContentLoaded', function() {
     AOS.init({
-        duration: 1000,
+        duration: 800,
         easing: 'ease-in-out',
         once: true,
-        mirror: false
+        mirror: false,
+        delay: 0,
+        offset: 50
     });
     
     // Set initial active nav link

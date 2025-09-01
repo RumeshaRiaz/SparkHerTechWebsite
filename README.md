@@ -1,85 +1,66 @@
-# 🌟 SparkHer Tech Academy Website
+# SparkHer Tech Academy Website
 
-**A Fresh Start, A Powerful Journey Just for HER!**
-
-Welcome to the official website of SparkHer Tech Academy - empowering women with cutting-edge technology skills through comprehensive courses designed for success in the digital world.
+A modern, responsive website for SparkHer Tech Academy with WhatsApp contact form integration.
 
 ## 🚀 Features
 
-- **Responsive Design** - Works perfectly on all devices
-- **Modern UI/UX** - Beautiful purple/blue gradient theme
-- **Interactive Animations** - Smooth scroll effects and hover animations
-- **Course Showcase** - 7 comprehensive tech courses
-- **Job Opportunities** - Career paths and salary information
-- **Contact Form** - Easy enrollment and inquiry system
+- Responsive design for all devices
+- Interactive course showcase
+- Job opportunities display
+- Technology stack visualization
+- WhatsApp contact form integration
+- Smooth animations and transitions
 
-## 💻 Courses Offered
+## 📱 WhatsApp Integration
 
-1. **Web Designing** - Layouts, animations, SEO basics
-2. **Video Editing** - Transitions, effects, color grading
-3. **Wireframing & UI/UX Design** - User-centered design principles
-4. **Data Science** - Real-world datasets and analysis
-5. **Chatbot Development** - AI-powered conversation design
-6. **Mobile App Development** - React Native, Flutter, Android
-7. **Full Stack Development** - Frontend, backend, databases
+When users submit the contact form, messages are automatically sent to your WhatsApp via Twilio API.
 
-## 🎯 Technologies Used
-
-- **HTML5** - Semantic structure
-- **CSS3** - Modern styling with animations
-- **JavaScript** - Interactive functionality
-- **AOS Library** - Scroll animations
-- **Font Awesome** - Icons
-- **Google Fonts** - Typography
-
-## 📱 Contact Information
-
-- **Phone:** +92-3407639339
-- **Email:** sparkhertech@gmail.com
-- **Address:** Street 05, Chatha Town, Near Mall Road, Sargodha, Pakistan
-
-## 🌈 Color Theme
-
-- **Primary Purple:** #8b4a9c
-- **Light Purple:** #c084fc
-- **Accent Blue:** #4169E1
-- **Secondary Blue:** #6495ED
+### Setup Instructions:
+1. **Create Twilio Account**: Visit [twilio.com/try-twilio](https://www.twilio.com/try-twilio)
+2. **Get Credentials**: Account SID and Auth Token from Twilio Console
+3. **WhatsApp Sandbox**: Join sandbox by sending "join [code]" to +1 415 523 8886
+4. **Environment Variables**: Copy `env.example` to `.env` and configure your credentials
+5. **Start Server**: Run `npm start` to launch the backend
 
 ## 🚀 Getting Started
 
+### Frontend Only (Static Website):
 1. Clone this repository
-2. Open `index.html` in your web browser
-3. Enjoy the beautiful website!
+2. Open `index.html` in your browser
 
-## 📄 File Structure
+### Full Stack (with WhatsApp):
+1. Clone this repository
+2. Install dependencies: `npm install`
+3. Configure environment variables in `.env` file
+4. Start server: `npm start`
+5. Visit `http://localhost:3001`
 
-```
-SparkHerTechWebsite/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styling
-├── script.js           # JavaScript functionality
-├── asset/
-│   ├── logo.png        # Academy logo
-│   ├── Poster (2).png  # Hero poster image
-│   └── hero-illustration.svg
-└── README.md           # This file
-```
+## 🌐 Deployment
 
-## 🎨 Features Highlights
+- **Live Site**: [spark-her-tech-website.vercel.app](https://spark-her-tech-website.vercel.app)
+- **Repository**: [github.com/RumeshaRiaz/SparkHerTechWebsite](https://github.com/RumeshaRiaz/SparkHerTechWebsite)
+- **Backend**: Configure environment variables in your hosting platform
 
-- ✨ **Sparkling Animations** around hero poster
-- 🎭 **Dropdown Menu** for courses navigation
-- 📊 **Interactive Job Cards** with salary ranges
-- 🌟 **Professional Design** suitable for academy branding
-- 📱 **Mobile Responsive** design
-- 🎯 **Call-to-Action** buttons throughout
 
-## 💡 About SparkHer Tech Academy
 
-SparkHer Tech Academy is dedicated to empowering women in technology. Our mission is to provide high-quality, accessible tech education that helps women build successful careers in the digital world.
+## 📞 Contact Information
 
-**Empowering Women • Building Futures • Creating Success**
+- **Phone:** +92-3407639339
+- **Email:** sparkhertech@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/sparkher-tech-b87983380/
+- **Instagram:** https://www.instagram.com/sparkher_techacademy/
+
+## 🎓 Courses Offered
+
+1. Web Designing
+2. Video Editing
+3. Wireframing & UI/UX Design
+4. Data Science
+5. Chatbot Development
+6. Mobile App Development
+7. Full Stack Development
+8. Microsoft Office Mastery
 
 ---
 
-© 2025 SparkHer Tech Academy. All rights reserved.
+**SparkHer Tech Academy** - Empowering women in technology since 2024

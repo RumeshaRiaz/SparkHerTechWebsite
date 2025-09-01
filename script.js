@@ -67,10 +67,45 @@ window.addEventListener('scroll', function() {
 // Mobile menu toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
+const navOverlay = document.getElementById('navOverlay');
 
 hamburger.addEventListener('click', function() {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    navOverlay.classList.toggle('active');
+});
+
+// Close mobile menu when clicking overlay
+navOverlay.addEventListener('click', function() {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+    navOverlay.classList.remove('active');
+});
+
+// Dropdown toggle functionality (click-based)
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const dropdown = this.parentElement;
+        const isActive = dropdown.classList.contains('active');
+        
+        // Close all other dropdowns
+        document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+        
+        // Toggle current dropdown
+        if (!isActive) {
+            dropdown.classList.add('active');
+        }
+    });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+    }
 });
 
 // Close mobile menu when clicking on a link and handle active states
@@ -79,6 +114,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
         // Close mobile menu
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        navOverlay.classList.remove('active');
         
         // Remove active class from all links
         document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
@@ -110,47 +146,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact form handling
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+// Contact form handling is now handled by contact-handler.js
+// Old form handler removed to prevent conflicts
+
+// Mobile touch support for job cards
+document.addEventListener('DOMContentLoaded', function() {
+    const jobCards = document.querySelectorAll('.job-card');
+    
+    jobCards.forEach(card => {
+        let touchTimer;
         
-        // Get form data
-        const formData = new FormData(this);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const phone = formData.get('phone');
-        const course = formData.get('course');
-        const message = formData.get('message');
+        // Touch start - show hover message after short delay
+        card.addEventListener('touchstart', function(e) {
+            clearTimeout(touchTimer);
+            touchTimer = setTimeout(() => {
+                card.classList.add('touch-active');
+            }, 150);
+        });
         
-        // Basic validation
-        if (!name || !email || !course) {
-            showNotification('Please fill in all required fields.', 'error');
-            return;
-        }
+        // Touch end - hide hover message
+        card.addEventListener('touchend', function(e) {
+            clearTimeout(touchTimer);
+            setTimeout(() => {
+                card.classList.remove('touch-active');
+            }, 2000); // Hide after 2 seconds
+        });
         
-        if (!isValidEmail(email)) {
-            showNotification('Please enter a valid email address.', 'error');
-            return;
-        }
-        
-        // Simulate form submission
-        showNotification('Thank you! Your message has been sent. We will contact you soon.', 'success');
-        
-        // Reset form
-        this.reset();
-        
-        // In a real application, you would send the data to your server here
-        console.log('Form submitted:', {
-            name,
-            email,
-            phone,
-            course,
-            message
+        // Touch cancel - hide hover message
+        card.addEventListener('touchcancel', function(e) {
+            clearTimeout(touchTimer);
+            card.classList.remove('touch-active');
         });
     });
-}
+});
 
 // Email validation function
 function isValidEmail(email) {

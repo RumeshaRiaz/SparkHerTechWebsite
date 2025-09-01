@@ -24,8 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
             
             try {
-                // Send to backend
-                const response = await fetch('http://localhost:3001/submit-contact', {
+                // Send to backend (works for both local development and production)
+                const apiUrl = window.location.hostname === 'localhost' 
+                    ? 'http://localhost:3001/submit-contact'
+                    : '/api/submit-contact';
+                    
+                const response = await fetch(apiUrl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

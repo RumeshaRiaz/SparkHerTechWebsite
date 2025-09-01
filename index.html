@@ -69,28 +69,28 @@
         </div>
         
         <div class="hero-container">
-            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="hero-content">
                 <div class="hero-logo">
                     <img src="asset/logo.png" alt="SparkHer Logo" class="hero-logo-img">
                     <h1>SPARK<span>HER</span></h1>
                 </div>
                 
-                <h2 class="hero-title" data-aos="fade-up" data-aos-delay="0">
+                <h2 class="hero-title">
                     A FRESH START, A POWERFUL<br>
                     JOURNEY JUST FOR <span class="highlight">HER!</span>
                 </h2>
                 
-                <p class="hero-description" data-aos="fade-up" data-aos-delay="100">
+                <p class="hero-description">
                     Empowering women with cutting-edge technology skills through comprehensive courses designed for success in the digital world.
                 </p>
                 
-                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                <div class="hero-buttons">
                     <a href="#courses" class="btn btn-primary">Explore Courses</a>
                     <a href="#contact" class="btn btn-secondary">Get Started</a>
                 </div>
             </div>
             
-            <div class="hero-visual" data-aos="fade-left" data-aos-delay="300">
+            <div class="hero-visual">
                 <div class="hero-illustration">
                     <img src="asset/Poster (2).png" alt="SparkHer Tech Academy Poster" class="illustration-img">
                     <!-- Sparkling animations -->
@@ -563,7 +563,12 @@
                 </div>
                 
                 <div class="contact-form" data-aos="fade-left">
-                    <form id="contactForm" action="#" method="post">
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Replace YOUR_ACCESS_KEY_HERE with your actual Web3Forms access key -->
+                        <input type="hidden" name="access_key" value="d725a1c1-bb3f-4a7a-8ace-c71a5ca7e8d5">
+                        <input type="hidden" name="subject" value="New Contact Form Submission from SparkHer Tech Academy">
+                        <input type="hidden" name="from_name" value="SparkHer Tech Academy Website">
+                        
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Your Name" required>
                         </div>

@@ -1,6 +1,6 @@
 # SparkHer Tech Academy Website
 
-A modern, responsive website for SparkHer Tech Academy with WhatsApp contact form integration.
+A modern, responsive website for SparkHer Tech Academy with email contact form integration.
 
 ## 🚀 Features
 
@@ -8,40 +8,45 @@ A modern, responsive website for SparkHer Tech Academy with WhatsApp contact for
 - Interactive course showcase
 - Job opportunities display
 - Technology stack visualization
-- WhatsApp contact form integration
+- Email contact form integration (Web3Forms)
 - Smooth animations and transitions
+- No backend required - pure frontend solution
 
-## 📱 WhatsApp Integration
+## 📧 Email Integration
 
-When users submit the contact form, messages are automatically sent to your WhatsApp via Twilio API.
+When users submit the contact form, messages are automatically sent to your email via Web3Forms API.
 
-### Setup Instructions:
-1. **Create Twilio Account**: Visit [twilio.com/try-twilio](https://www.twilio.com/try-twilio)
-2. **Get Credentials**: Account SID and Auth Token from Twilio Console
-3. **WhatsApp Sandbox**: Join sandbox by sending "join [code]" to +1 415 523 8886
-4. **Environment Variables**: Copy `env.example` to `.env` and configure your credentials
-5. **Start Server**: Run `npm start` to launch the backend
+
 
 ## 🚀 Getting Started
 
-### Frontend Only (Static Website):
+### Simple Setup (Recommended):
 1. Clone this repository
-2. Open `index.html` in your browser
+2. Add your Web3Forms access key to `index.html`
+3. Open `index.html` in your browser
+4. Test the contact form
 
-### Full Stack (with WhatsApp):
-1. Clone this repository
-2. Install dependencies: `npm install`
-3. Configure environment variables in `.env` file
-4. Start server: `npm start`
-5. Visit `http://localhost:3001`
+### Local Development Server:
+```bash
+# Start simple HTTP server
+python -m http.server 8000
+
+# Or open directly
+start index.html
+```
 
 ## 🌐 Deployment
 
-- **Live Site**: [spark-her-tech-website.vercel.app](https://spark-her-tech-website.vercel.app)
-- **Repository**: [github.com/RumeshaRiaz/SparkHerTechWebsite](https://github.com/RumeshaRiaz/SparkHerTechWebsite)
-- **Backend**: Configure environment variables in your hosting platform
 
+### Vercel Deployment:
+```bash
+npx vercel --prod
+```
 
+### GitHub Pages (Alternative):
+1. Push to GitHub
+2. Enable GitHub Pages in repository settings
+3. Select main branch as source
 
 ## 📞 Contact Information
 
@@ -60,6 +65,9 @@ When users submit the contact form, messages are automatically sent to your What
 6. Mobile App Development
 7. Full Stack Development
 8. Microsoft Office Mastery
+
+## 📧 Email Notifications
+
 
 ---
 

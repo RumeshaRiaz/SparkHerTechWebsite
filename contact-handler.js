@@ -1,4 +1,4 @@
-// Frontend JavaScript to handle contact form submission
+// Frontend JavaScript to handle contact form submission with Web3Forms
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
@@ -9,13 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Get form data
             const formData = new FormData(this);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                course: formData.get('course'),
-                message: formData.get('message')
-            };
             
             // Show loading state
             const submitBtn = this.querySelector('button[type="submit"]');
@@ -24,24 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
             
             try {
-                // Send to backend (works for both local development and production)
-                const apiUrl = window.location.hostname === 'localhost' 
-                    ? 'http://localhost:3001/submit-contact'
-                    : '/api/submit-contact';
-                    
-                const response = await fetch(apiUrl, {
+                // Send to Web3Forms
+                const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
+                    body: formData
                 });
                 
                 const result = await response.json();
                 
                 if (result.success) {
                     // Show success message
-                    showNotification('Message sent successfully! We will contact you soon via WhatsApp.', 'success');
+                    showNotification('Message sent successfully! We will contact you soon via email.', 'success');
                     
                     // Reset form ONLY after successful submission
                     this.reset();

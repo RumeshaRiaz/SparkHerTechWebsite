@@ -761,9 +761,57 @@
     </div>
     
     <script>
+        // Apply mobile responsive styles
+        function applyChatbotResponsiveStyles() {
+            const widget = document.getElementById('chatbase-widget');
+            const container = document.getElementById('chatbase-container');
+            const button = document.getElementById('chatbase-toggle');
+            
+            if (!widget || !container || !button) return;
+            
+            if (window.innerWidth <= 768) {
+                // Mobile and tablet styles
+                widget.style.width = 'calc(100vw - 30px)';
+                widget.style.height = '80vh';
+                widget.style.right = '15px';
+                widget.style.left = '15px';
+                widget.style.bottom = '80px';
+                widget.style.maxWidth = '100%';
+                
+                // Adjust button for mobile
+                button.style.width = '55px';
+                button.style.height = '55px';
+                button.style.fontSize = '22px';
+                
+                // Adjust container position
+                container.style.right = '15px';
+                container.style.bottom = '15px';
+            } else {
+                // Desktop styles
+                widget.style.width = '400px';
+                widget.style.height = '600px';
+                widget.style.right = '0';
+                widget.style.left = 'auto';
+                widget.style.bottom = '80px';
+                widget.style.maxWidth = '400px';
+                
+                // Reset button for desktop
+                button.style.width = '60px';
+                button.style.height = '60px';
+                button.style.fontSize = '24px';
+                
+                // Reset container position
+                container.style.right = '20px';
+                container.style.bottom = '20px';
+            }
+        }
+        
         function toggleChatbaseWidget() {
             const widget = document.getElementById('chatbase-widget');
             const button = document.getElementById('chatbase-toggle');
+            
+            // Apply responsive styles before showing
+            applyChatbotResponsiveStyles();
             
             if (widget.style.display === 'none' || widget.style.display === '') {
                 widget.style.display = 'block';
@@ -786,15 +834,15 @@
             }
         });
         
-        // Mobile responsiveness
-        if (window.innerWidth <= 480) {
-            const widget = document.getElementById('chatbase-widget');
-            if (widget) {
-                widget.style.width = 'calc(100vw - 40px)';
-                widget.style.height = '70vh';
-                widget.style.right = '20px';
-                widget.style.left = '20px';
-            }
+        // Apply responsive styles on load and resize
+        document.addEventListener('DOMContentLoaded', applyChatbotResponsiveStyles);
+        window.addEventListener('resize', applyChatbotResponsiveStyles);
+        
+        // Apply styles immediately if DOM is already loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', applyChatbotResponsiveStyles);
+        } else {
+            applyChatbotResponsiveStyles();
         }
     </script>
     

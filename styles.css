@@ -1895,3 +1895,58 @@ body {
         font-size: 0.8rem;
     }
 }
+
+/* Chatbot Mobile Responsiveness */
+#chatbase-container {
+    position: fixed !important;
+    z-index: 9999 !important;
+}
+
+@media (max-width: 768px) {
+    #chatbase-container {
+        right: 15px !important;
+        bottom: 15px !important;
+    }
+    
+    #chatbase-toggle {
+        width: 55px !important;
+        height: 55px !important;
+        font-size: 22px !important;
+    }
+    
+    #chatbase-widget {
+        position: absolute !important;
+        width: calc(100vw - 30px) !important;
+        height: 80vh !important;
+        right: 15px !important;
+        left: 15px !important;
+        bottom: 80px !important;
+        max-width: 100% !important;
+    }
+    
+    #chatbase-widget iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #chatbase-widget {
+        width: calc(100vw - 20px) !important;
+        height: 75vh !important;
+        right: 10px !important;
+        left: 10px !important;
+        bottom: 70px !important;
+    }
+    
+    #chatbase-toggle {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 20px !important;
+    }
+    
+    #chatbase-container {
+        right: 10px !important;
+        bottom: 10px !important;
+    }
+}

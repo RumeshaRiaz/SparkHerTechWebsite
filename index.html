@@ -739,16 +739,20 @@
         
         <!-- Chat Widget -->
         <div id="chatbase-widget" style="
-            position: absolute;
+            position: fixed;
             bottom: 80px;
-            right: 0;
-            width: 400px;
-            height: 600px;
+            right: 15px;
+            left: 15px;
+            width: calc(100vw - 30px);
+            height: 75vh;
+            max-width: 400px;
+            max-height: 600px;
             background: white;
             border-radius: 12px;
             box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
             display: none;
             overflow: hidden;
+            z-index: 10000;
         ">
             <iframe
                 src="https://www.chatbase.co/chatbot-iframe/SFneQ6_lM34FbeSPNX7F-"
@@ -770,13 +774,15 @@
             if (!widget || !container || !button) return;
             
             if (window.innerWidth <= 768) {
-                // Mobile and tablet styles
+                // Mobile and tablet styles - use fixed positioning
+                widget.style.position = 'fixed';
                 widget.style.width = 'calc(100vw - 30px)';
-                widget.style.height = '80vh';
+                widget.style.height = '75vh';
                 widget.style.right = '15px';
                 widget.style.left = '15px';
                 widget.style.bottom = '80px';
-                widget.style.maxWidth = '100%';
+                widget.style.maxWidth = 'none';
+                widget.style.zIndex = '10000';
                 
                 // Adjust button for mobile
                 button.style.width = '55px';
@@ -787,13 +793,15 @@
                 container.style.right = '15px';
                 container.style.bottom = '15px';
             } else {
-                // Desktop styles
+                // Desktop styles - use absolute positioning
+                widget.style.position = 'absolute';
                 widget.style.width = '400px';
                 widget.style.height = '600px';
                 widget.style.right = '0';
                 widget.style.left = 'auto';
                 widget.style.bottom = '80px';
                 widget.style.maxWidth = '400px';
+                widget.style.zIndex = '10000';
                 
                 // Reset button for desktop
                 button.style.width = '60px';

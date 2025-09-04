@@ -1915,13 +1915,15 @@ body {
     }
     
     #chatbase-widget {
-        position: absolute !important;
+        position: fixed !important;
         width: calc(100vw - 30px) !important;
-        height: 80vh !important;
+        height: 75vh !important;
         right: 15px !important;
         left: 15px !important;
         bottom: 80px !important;
-        max-width: 100% !important;
+        max-width: none !important;
+        z-index: 10000 !important;
+        margin: 0 !important;
     }
     
     #chatbase-widget iframe {
@@ -1932,11 +1934,15 @@ body {
 
 @media (max-width: 480px) {
     #chatbase-widget {
+        position: fixed !important;
         width: calc(100vw - 20px) !important;
-        height: 75vh !important;
+        height: 70vh !important;
         right: 10px !important;
         left: 10px !important;
         bottom: 70px !important;
+        max-width: none !important;
+        z-index: 10000 !important;
+        margin: 0 !important;
     }
     
     #chatbase-toggle {

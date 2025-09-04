@@ -1,3 +1,17 @@
+// Loading Screen Control
+window.addEventListener('load', function() {
+    // Hide loading screen after page is fully loaded
+    setTimeout(function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+            loadingScreen.classList.add('loading-fade-out');
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 500); // Wait for fade out animation
+        }
+    }, 1500); // Show loading screen for 1.5 seconds
+});
+
 // Initialize AOS (Animate On Scroll) and page functionality
 document.addEventListener('DOMContentLoaded', function() {
     AOS.init({
@@ -306,70 +320,6 @@ document.querySelectorAll('.course-card').forEach(card => {
     card.addEventListener('mouseleave', function() {
         this.style.transform = 'translateY(0) scale(1)';
     });
-});
-
-// Add loading animation
-window.addEventListener('load', function() {
-    const loader = document.createElement('div');
-    loader.className = 'page-loader';
-    loader.innerHTML = `
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <p>Loading SparkHer Tech Academy...</p>
-        </div>
-    `;
-    
-    loader.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #4a1a5c, #8b4a9c);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 99999;
-        opacity: 1;
-        transition: opacity 0.5s ease;
-    `;
-    
-    const loaderContent = loader.querySelector('.loader-content');
-    loaderContent.style.cssText = `
-        text-align: center;
-        color: white;
-    `;
-    
-    const spinner = loader.querySelector('.loader-spinner');
-    spinner.style.cssText = `
-        width: 50px;
-        height: 50px;
-        border: 4px solid rgba(255,255,255,0.3);
-        border-top: 4px solid white;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin: 0 auto 1rem;
-    `;
-    
-    // Add spinner animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    `;
-    document.head.appendChild(style);
-    
-    document.body.appendChild(loader);
-    
-    // Remove loader after a short delay
-    setTimeout(() => {
-        loader.style.opacity = '0';
-        setTimeout(() => {
-            loader.remove();
-        }, 500);
-    }, 1500);
 });
 
 // Add typing effect to hero title

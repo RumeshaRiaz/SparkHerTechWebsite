@@ -31,6 +31,85 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #4a1a5c 0%, #8b4a9c 50%, #c084fc 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        color: white;
+    ">
+        <div class="loading-logo" style="
+            margin-bottom: 30px;
+            text-align: center;
+        ">
+            <img src="asset/logo.png" alt="SparkHer Logo" style="
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin-bottom: 15px;
+                box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+            ">
+            <h1 style="
+                font-family: 'Poppins', sans-serif;
+                font-size: 28px;
+                margin: 0;
+                font-weight: 700;
+                letter-spacing: 2px;
+                color: white;
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            ">SPARK<span style='color: #c084fc;'>HER</span></h1>
+            <p style="
+                font-family: 'Poppins', sans-serif;
+                font-size: 12px;
+                margin: 5px 0 0 0;
+                font-weight: 500;
+                letter-spacing: 3px;
+                color: rgba(255, 255, 255, 0.9);
+                text-transform: uppercase;
+            ">TECH ACADEMY</p>
+        </div>
+        
+        <div class="loading-spinner" style="
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            border-top: 3px solid #c084fc;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 25px;
+        "></div>
+        
+        <p style="
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            margin: 0;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+        ">Empowering Women in Technology...</p>
+    </div>
+
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+    </style>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -638,5 +717,86 @@
     <script src="script.js"></script>
     <!-- Contact Form Handler -->
     <script src="contact-handler.js"></script>
+    
+    <!-- Chatbase AI Chatbot - Working Integration -->
+    <div id="chatbase-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+        <!-- Chat Button -->
+        <button id="chatbase-toggle" onclick="toggleChatbaseWidget()" style="
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        ">💬</button>
+        
+        <!-- Chat Widget -->
+        <div id="chatbase-widget" style="
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 400px;
+            height: 600px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
+            display: none;
+            overflow: hidden;
+        ">
+            <iframe
+                src="https://www.chatbase.co/chatbot-iframe/SFneQ6_lM34FbeSPNX7F-"
+                width="100%"
+                style="height: 100%; border: none; border-radius: 12px;"
+                frameborder="0"
+                title="SparkHer Tech Academy AI Assistant">
+            </iframe>
+        </div>
+    </div>
+    
+    <script>
+        function toggleChatbaseWidget() {
+            const widget = document.getElementById('chatbase-widget');
+            const button = document.getElementById('chatbase-toggle');
+            
+            if (widget.style.display === 'none' || widget.style.display === '') {
+                widget.style.display = 'block';
+                button.style.transform = 'scale(1.1)';
+            } else {
+                widget.style.display = 'none';
+                button.style.transform = 'scale(1)';
+            }
+        }
+        
+        // Close widget when clicking outside
+        document.addEventListener('click', function(e) {
+            const container = document.getElementById('chatbase-container');
+            const widget = document.getElementById('chatbase-widget');
+            const button = document.getElementById('chatbase-toggle');
+            
+            if (!container.contains(e.target) && widget.style.display === 'block') {
+                widget.style.display = 'none';
+                button.style.transform = 'scale(1)';
+            }
+        });
+        
+        // Mobile responsiveness
+        if (window.innerWidth <= 480) {
+            const widget = document.getElementById('chatbase-widget');
+            if (widget) {
+                widget.style.width = 'calc(100vw - 40px)';
+                widget.style.height = '70vh';
+                widget.style.right = '20px';
+                widget.style.left = '20px';
+            }
+        }
+    </script>
+    
 </body>
 </html>
